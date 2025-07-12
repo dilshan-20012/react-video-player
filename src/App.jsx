@@ -10,9 +10,10 @@ function App() {
     responsive: true,
     fluid: true,
     sources: [{
-      src: 'https://ik.imagekit.io/roadsidecoder/yt/example.mp4',
-      type: 'video/mp4'
-    }]
+      src: 'https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080,l-subtitles,i-yt/english.srt,l-end',
+      type: 'application/x-mpegURL'
+    }],
+    poster: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-thumbnail.jpg?tr=so-5"
 
   };
 
