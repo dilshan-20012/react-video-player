@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import videojs from 'video.js';
-import "video.js/dist/video-js.css"
+import "video.js/dist/video-js.css";
+import "videojs-contrib-quality-levels";
+import "videojs-http-source-selector";
 
 const VideoJs = ({options, onReady}) => {
     const playerRef = useRef(null);
@@ -18,6 +20,17 @@ const VideoJs = ({options, onReady}) => {
                 videojs.log('player is ready');
                 onReady && onReady(player);
             });
+
+            // ABS
+            player.ready(() => {                
+                 if(typeof player.httpSourceSelector === "function"){
+                    player.httpSourceSelector({
+                        default:"auto"
+                    })
+                 }
+            });
+
+            playerRef.current = player
 
         }else{
             const player = playerRef.current;
