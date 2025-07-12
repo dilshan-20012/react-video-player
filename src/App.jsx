@@ -31,6 +31,13 @@ function App() {
         srclang:"hin",
         label:"Hindi",
         default: false,
+      },
+      {
+        kind:"chapters",
+        src:"/subtitles/chapters.vtt",
+        srclang:"hin",
+        label:"Hindi",
+        default: false,
       }
     ]
 
