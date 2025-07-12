@@ -13,10 +13,26 @@ function App() {
     fluid: true,
     playbackRates:[0.25,0.5,1,1.5],
     sources: [{
-      src: 'https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080,l-subtitles,i-yt/english.srt,l-end',
+      src: 'https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080',
       type: 'application/x-mpegURL'
     }],
-    poster: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-thumbnail.jpg?tr=so-5"
+    poster: "https://ik.imagekit.io/roadsidecoder/yt/example.mp4/ik-thumbnail.jpg?tr=so-5",
+    tracks: [
+      {
+        kind:"captions",
+        src:"/subtitles/english.vtt",
+        srclang:"eng",
+        label:"English",
+        default: true,
+      },
+      {
+        kind:"captions",
+        src:"/subtitles/hindi.vtt",
+        srclang:"hin",
+        label:"Hindi",
+        default: false,
+      }
+    ]
 
   };
 
