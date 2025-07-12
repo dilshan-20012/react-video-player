@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import videojs from 'video.js';
 import VideoJs from './components/Video';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
 
   const videoJsOptions = {
     autoplay: true,
+    muted: false,
     controls: true,
     responsive: true,
     fluid: true,
